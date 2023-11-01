@@ -1,20 +1,20 @@
-docker run/
- --name postgres /
- -e POSTGRES_USER=ericgomes /
- -e POSTGRES_PASSWORD=12345
- -e POSTGRES_DB=heroes /
- -p 5432:5432 /
- -d /
+docker run\
+ --name postgres \
+ -e POSTGRES_USER=ericgomes \
+ -e POSTGRES_PASSWORD=12345 \
+ -e POSTGRES_DB=heroes \
+ -p 5432:5432 \
+ -d \
  postgres
 
 
  docker psc
 
-docker run /
- --name adminer /
- -p 8080:8080 /
- --link postgres:postgres /
- -d /
+docker run \
+ --name adminer \
+ -p 8080:8080 \
+ --link postgres:postgres \
+ -d \
  adminer
 
 docker run --name adminer -p 8080:8080 --link postgres:postgres -d adminer
